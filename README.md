@@ -33,12 +33,12 @@ A complete Node.js e-commerce API with user authentication, product management, 
 ecommerce-api/
 ├── src/
 │   ├── config/
-│   │   ├── database.js      # Database configuration
-│   │   └── schema.sql        # Database schema
+│   │   ├── database.js      
+│   │   └── schema.sql       
 │   ├── controllers/
-│   │   ├── auth.controller.js    # User/Seller authentication
-│   │   ├── product.controller.js # Product management
-│   │   ├── cart.controller.js    # Cart operations
+│   │   ├── auth.controller.js    
+│   │   ├── product.controller.js 
+│   │   ├── cart.controller.js    
 │   │   ├── order.controller.js   # Order management
 │   │   └── coupon.controller.js  # Coupon management
 │   ├── middleware/
@@ -75,39 +75,12 @@ Create a MySQL database named `ecommerce_db` and run the schema:
 mysql -u root -p < src/config/schema.sql
 ```
 
-### 2. Environment Configuration
 
-Update the `.env` file with your database credentials:
-
-```env
-# Database Configuration
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=ecommerce_db
-
-# JWT Secret
-JWT_SECRET=your_jwt_secret_key_here
-
-# Server Port
-PORT=3000
-```
 
 ### 3. Install Dependencies
-
-```bash
 npm install
-```
-
 ### 4. Start the Server
-
-```bash
-# Development mode
 npm run dev
-
-# Production mode
-npm start
-```
 
 The API will be available at `http://localhost:3000`
 
@@ -325,9 +298,6 @@ curl -X POST http://localhost:3000/api/auth/user/register \
 curl -X POST http://localhost:3000/api/auth/user/login \
   -H "Content-Type: application/json" \
   -d '{"email":"john@example.com","password":"password123"}'
-
-
-### 2. Using Browser
 
 You can test GET endpoints directly in your browser:
 - `http://localhost:3000/health`
